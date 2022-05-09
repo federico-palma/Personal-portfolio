@@ -10,10 +10,19 @@ body {
     background-color: #333D47;
 }
 
-/* Navbar */
+:root {
+    --navbar-background-color: #262730;
+    --main-background-color: #4D5B6A;
+    --section1-background-color: #4D5B6A;
+    --section2-background-color: #6c7e90;
+}
+
+/*** Navbar ***/
 #navbar {
+    position: fixed;
+    width: 90%;
     height: 100px;
-    background-color: #262730;
+    background-color: var(--navbar-background-color);
     padding: 0px 5%;
     display: flex;
     justify-content: center;
@@ -48,7 +57,50 @@ body {
 }
 
 
-
+/*** Main ***/
 main {
-    background-color: #4D5B6A;
+    background-color: var(--main-background-color);
+}
+
+section {
+    height: 100vh;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Intro Section */
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-container {
+    width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+/* About Section */
+#about {
+    background-color: var(--section2-background-color);
+}
+
+/* Skills Section */
+#skills {
+    background-color: var(--section1-background-color);
+}
+
+/* Projects Section */
+#projects {
+    background-color: var(--section2-background-color);
+}
+
+/* Contact Section */
+#contact {
+    background-color: var(--section1-background-color);
 }
