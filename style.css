@@ -71,6 +71,7 @@ section {
 
 /* Intro Section */
 #intro {
+    background-color: var(--section1-background-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +89,12 @@ section {
 /* About Section */
 #about {
     background-color: var(--section2-background-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.about-container {
+    width: 500px;
 }
 
 /* Skills Section */
