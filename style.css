@@ -18,7 +18,6 @@ body {
     background-color: #333D47;
 }
 
-
 /*** Navbar ***/
 #navbar {
     position: fixed;
@@ -70,6 +69,7 @@ section {
     margin: auto;
     padding: 50px;
     text-align: center;
+    scroll-margin-top: 50px;
 }
 
 /* Intro Section */
