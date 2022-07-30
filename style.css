@@ -171,12 +171,20 @@ section {
   transition: all 1s;
 }
 
+.project-title {
+  margin: 10px auto;
+}
+
 .project-techs {
   width: 50%;
   height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.project-techs > .skill-div {
+  margin: 20px;
 }
 
 .project-techs img {
@@ -190,7 +198,7 @@ section {
   /* margin: 10px; */
   border-radius: 10px;
   height: auto;
-  width: 90%;
+  width: 80%;
 }
 
 .project-desc {
