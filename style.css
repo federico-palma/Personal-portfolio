@@ -7,6 +7,10 @@
   --font-color: #f5f5f5;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   color: var(--font-color);
   font-size: 20px;
@@ -17,6 +21,7 @@ html {
 
 body {
   background-color: #333d47;
+  width: 100vw;
 }
 
 /*** Navbar ***/
@@ -67,10 +72,13 @@ body {
 /*** Main ***/
 main {
   background-color: var(--main-background-color);
+  width: 100%;
+  margin: 0px;
 }
 
 section {
-  min-height: 60vh;
+  min-height: 70vh;
+  /* width: 100%; */
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -103,7 +111,7 @@ section {
   align-items: flex-start;
 }
 .about-container {
-  width: 500px;
+  width: 90%;
 }
 
 /* Skills Section */
@@ -113,7 +121,8 @@ section {
 
 .skills-container {
   margin: 75px auto;
-  width: 600px;
+  width: fit-content;
+  max-width: 600px;
   resize: both;
   display: flex;
   justify-content: center;
@@ -149,13 +158,17 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .projects-container {
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .project-div {
+  margin: auto;
   transition: all 1s;
   padding: 20px;
   width: 500px;
@@ -166,6 +179,7 @@ section {
   border-radius: 10px;
   background-color: var(--section1-background-color);
 }
+
 .project-div:hover {
   box-shadow: 0px 0px 20px var(--font-color);
   transition: all 1s;
@@ -195,7 +209,6 @@ section {
 }
 
 .project-img {
-  /* margin: 10px; */
   border-radius: 10px;
   height: auto;
   width: 80%;
@@ -234,12 +247,17 @@ section {
 
 .contact-container {
   margin: auto;
+
+}
+
+#contact-list {
+
 }
 
 #contact-list li {
   list-style-type: none;
   text-align: left;
-  margin: 30px;
+  margin: 30px 0px;
 }
 
 #contact-list li a {
@@ -252,4 +270,41 @@ section {
   font-size: 2.5rem;
   margin-right: 40px;
   vertical-align: middle;
+}
+
+@media screen and (max-width: 1000px) {
+  .skill-div {
+    margin: 30px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  section {
+    padding: 0px;
+  }
+
+  .project-div {
+    transform: scale(90%);
+    width: 90%;
+  }
+
+  .skill-div img {
+    height: auto;
+    width: 50px;
+  }
+
+  .contact-container {
+    transform: scale(80%);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .project-div {
+    transform: scale(80%);
+    width: fit-content;
+  }
+
+  .contact-container {
+    transform: scale(60%);
+  }
 }
