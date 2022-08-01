@@ -49,11 +49,17 @@ body {
   width: 180px;
 }
 
+#options-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
 #options {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 40px;
   width: 180px;
 }
 
@@ -61,12 +67,51 @@ body {
   margin: 0px 20px;
 }
 
-#navbar-links {
+.nav-links {
   display: flex;
 }
 
 .navbar-link {
   margin: 0px 20px;
+}
+
+/* Hamburger menu */
+#hamburger {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-30%);
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  position: relative;
+  right: 10px;
+  width: 35px;
+  height: 5px;
+  background-color: var(--font-color);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.open-burger .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 7px);
+}
+
+/* Fade out the second bar */
+.open-burger .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.open-burger .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -7px);
 }
 
 /*** Main ***/
@@ -82,7 +127,7 @@ section {
   margin: auto;
   padding: 50px;
   text-align: center;
-  scroll-margin-top: 50px;
+  scroll-margin-top: 100px;
 }
 
 /* Intro Section */
@@ -111,7 +156,8 @@ section {
   align-items: flex-start;
 }
 .about-container {
-  width: 90%;
+  width: 500px;
+  min-width: 50%;
 }
 
 /* Skills Section */
@@ -136,7 +182,7 @@ section {
 
 .skill-div img {
   height: auto;
-  width: 100px;
+  width: 80px;
   filter: grayscale(100);
   transition: all 2s;
 }
@@ -247,11 +293,6 @@ section {
 
 .contact-container {
   margin: auto;
-
-}
-
-#contact-list {
-
 }
 
 #contact-list li {
@@ -275,6 +316,43 @@ section {
 @media screen and (max-width: 1000px) {
   .skill-div {
     margin: 30px;
+  }
+
+  #header-container {
+    position: absolute;
+    z-index: 5;
+  }
+
+  #hamburger {
+    display: block;
+    position: static;
+  }
+
+  .nav-links {
+    display: none;
+    background-color: var(--navbar-background-color);
+    width: fit-content;
+    height: fit-content;
+    padding: 30px 50px;
+    position: absolute;
+    right: -130px;
+    transform: translateX(-50%);
+    top: 100px;
+    flex-direction: column;
+    text-align: center;
+    border-top: 4px solid var(--navbar-background-color);
+    border-bottom-left-radius: 20px;
+    box-shadow: 0px 3px 7px -3px var(--font-color);
+  }
+
+  .nav-links a {
+    margin: 20px;
+    font-size: 1.3rem;
+    display: block;
+  }
+
+  .show-menu {
+    display: flex;
   }
 }
 
