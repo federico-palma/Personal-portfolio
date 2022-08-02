@@ -12,3 +12,27 @@ for (let i = 0; i < navLinksList.length; i++) {
     navLinks.classList.remove("show-menu");
   });
 }
+
+// Fade ins between title and header
+const introTitle = document.getElementsByClassName("intro-container")[0];
+const headerTitle = document.getElementById("logo");
+let firstScroll = true;
+
+document.addEventListener("scroll", () => {
+
+  if (window.scrollY > 50) {
+    introTitle.classList.remove("fade-in-class");
+    introTitle.classList.add("fade-out-class");
+    headerTitle.classList.remove("fade-out-class");
+    headerTitle.classList.add("fade-in-class");
+    firstScroll = false
+  }
+  if (window.scrollY < 50) {
+    introTitle.classList.remove("fade-out-class");
+    introTitle.classList.add("fade-in-class");
+    headerTitle.classList.remove("fade-in-class");
+    if (!firstScroll) {
+      headerTitle.classList.add("fade-out-class");
+    }
+  }
+});
