@@ -160,7 +160,6 @@ main {
 
 section {
   min-height: 70vh;
-  height: auto;
   width: 100%;
   margin: auto;
   padding: 50px;
@@ -231,7 +230,6 @@ section {
 
 /* About Section */
 #about {
-  background-color: var(--section2-background-color);
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -239,6 +237,10 @@ section {
 .about-container {
   width: 500px;
   min-width: 50%;
+}
+
+.about-container p {
+  text-align: justify;
 }
 
 /* Skills Section */
@@ -253,25 +255,33 @@ section {
   resize: both;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
 .skill-div {
-  margin: 50px;
+  margin: 0px 40px 50px 40px;
+  transition: all 2s;
+  height: auto;
+  width: 95px;
+  display: grid;
+  grid-template-rows: 90px auto;
+  text-align: center;
 }
 
 .skill-div img {
   height: auto;
   width: 80px;
-  filter: grayscale(100);
-  transition: all 2s;
+  margin: auto;
 }
 
-.skill-div img:hover {
-  filter: grayscale(0);
+.skill-div h4 {
+  font-weight: inherit;
+  text-align: center;
+}
+
+.skill-div:hover {
   transition: all 1s;
-  transform: scale(120%);
   cursor: default;
 }
 
@@ -370,7 +380,7 @@ section {
 /* Contact Section */
 #contact {
   background-color: var(--section1-background-color);
-  height: 540px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
