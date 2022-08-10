@@ -45,7 +45,7 @@ body {
 }
 
 /* Scrollbar */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
 }
 
@@ -55,7 +55,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: var(--accent-color);
-}
+} */
 
 /*** SideBar ***/
 .side-bar {
@@ -114,6 +114,7 @@ body {
   margin: 10px 0px;
   color: var(--idle-color);
   font-size: 1.2rem;
+  transition: color 0.4s;
 }
 
 .navbar-link:hover {
