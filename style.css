@@ -5,6 +5,7 @@
   --navbar-background-color: rgb(208, 207, 207);
   --main-background-color: rgb(236, 236, 236);
   --accent-color: rgb(0, 0, 202);
+  --idle-color: grey;
   --font-color: rgb(0, 0, 0);
 }
 
@@ -12,6 +13,7 @@
   --navbar-background-color: rgb(42, 42, 42);
   --main-background-color: rgb(87, 87, 87);
   --accent-color: rgb(218, 106, 2);
+  --idle-color: grey;
   --font-color: rgb(255, 255, 255);
 }
 
@@ -40,6 +42,19 @@ body {
   margin: auto;
   width: 100%;
   max-width: 1800px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navbar-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
 }
 
 /*** SideBar ***/
@@ -97,7 +112,7 @@ body {
 
 .navbar-link {
   margin: 10px 0px;
-  color: gray;
+  color: var(--idle-color);
   font-size: 1.2rem;
 }
 
@@ -114,18 +129,27 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  color: var(--idle-color);
 }
 
 #theme-toggle-btn {
   margin: 10px;
+  transition: color 0.3s;
 }
 
 #theme-toggle-btn:hover {
   cursor: pointer;
+  color: var(--font-color);
 }
 
 #language-change {
   margin: 10px;
+  transition: color 0.3s;
+}
+
+#language-change:hover {
+  color: var(--font-color);
+  cursor: pointer;
 }
 
 /* Hamburger menu */
@@ -208,6 +232,21 @@ section {
 #intro-header {
   font-size: 3rem;
   font-weight: 900;
+  /* animation: header-anim 5s linear 0s 1 forwards; */
+}
+
+@keyframes header-anim {
+  0% {
+    text-shadow: -1000px 0px 50px rgba(0, 0, 202, 0);
+  }
+
+  50% {
+    text-shadow: 0px 0px 0px rgba(0, 0, 202, 0.502);
+  }
+
+  100% {
+    text-shadow: 1000px 0px 50px rgba(0, 0, 202, 0);
+  }
 }
 
 /* Fade ins between title and header animation */
