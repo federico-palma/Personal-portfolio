@@ -1,17 +1,21 @@
 // Handle burger menu
 const burgerMenu = document.getElementById("hamburger");
-const navLinks = document.getElementsByClassName("nav-links")[0];
-const navLinksList = document.getElementsByClassName("navbar-link");
+const sideMenu = document.getElementById("menu");
+const navLinks = document.getElementsByClassName("navbar-link");
 
-burgerMenu.addEventListener("click", () => {
-  navLinks.classList.toggle("show-menu");
-});
-
-for (let i = 0; i < navLinksList.length; i++) {
-  navLinksList[i].addEventListener("click", () => {
-    navLinks.classList.remove("show-menu");
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", () => {
+    sideMenu.classList.remove("show-menu");
   });
 }
+
+const handleShowMenuToggle = () => {
+  sideMenu.classList.toggle("show-menu");
+};
+
+burgerMenu.addEventListener("click", handleShowMenuToggle);
+
+window.onresize = () => sideMenu.classList.remove("show-menu");
 
 // Fade ins between title and header
 const introTitle = document.getElementsByClassName("intro-container")[0];

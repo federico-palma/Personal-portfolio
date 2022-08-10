@@ -3,7 +3,7 @@
 
 :root.light-theme {
   --navbar-background-color: rgb(208, 207, 207);
-  --main-background-color: rgb(255, 255, 255);
+  --main-background-color: rgb(236, 236, 236);
   --accent-color: rgb(0, 0, 202);
   --font-color: rgb(0, 0, 0);
 }
@@ -358,19 +358,19 @@ section {
 }
 
 .project-tech-html {
-  background-color: rgb(216, 0, 0);
+  background-color: rgb(199, 2, 2);
 }
 
 .project-tech-css {
-  background-color: rgb(0, 0, 216);
+  background-color: rgb(3, 3, 204);
 }
 
 .project-tech-js {
-  background-color: rgb(219, 143, 1);
+  background-color: rgb(194, 181, 3);
 }
 
 .project-tech-react {
-  background-color: rgb(59, 59, 255);
+  background-color: rgb(72, 72, 253);
 }
 
 .project-tech-vue {
@@ -484,6 +484,10 @@ section {
 }
 
 @media screen and (max-width: 950px) {
+  section {
+    scroll-margin-top: 40px;
+  }
+
   .side-bar {
     width: 100%;
     max-width: unset;
@@ -504,8 +508,31 @@ section {
   }
 
   .menu {
+    /* visibility: hidden; */
+    background-color: var(--navbar-background-color);
+    width: 165px;
+    height: fit-content;
+    padding-top: 10px;
     position: absolute;
-    visibility: hidden;
+    right: 0px;
+    top: 86px;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.7s ease-out;
+    box-shadow: -1px 3px 5px gray;
+  }
+
+  .show-menu {
+    /* visibility: visible; */
+    transform: translateX(0%);
+  }
+
+  .navbar {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   main {
