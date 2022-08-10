@@ -37,15 +37,22 @@ document.addEventListener("scroll", () => {
 });
 
 // Handle change theme
-const changeThemeBtn = document.getElementById("theme-toggle-btn");
+const themeToggleBtn = document.getElementById("theme-toggle-btn");
 const rootElement = document.documentElement;
 
-rootElement.className = "light-theme";
+rootElement.className = localStorage.getItem("currentTheme")
+  ? localStorage.getItem("currentTheme")
+  : "light-theme";
 
 function setTheme() {
   const newTheme =
     rootElement.className === "light-theme" ? "dark-theme" : "light-theme";
   rootElement.className = newTheme;
+  saveThemetoLocalStorage();
 }
 
-changeThemeBtn.addEventListener("click", setTheme);
+themeToggleBtn.addEventListener("click", setTheme);
+
+function saveThemetoLocalStorage() {
+  localStorage.setItem("currentTheme", rootElement.className);
+}
