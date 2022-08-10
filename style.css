@@ -1,17 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap");
 
-:root.light-theme{
-  --navbar-background-color: rgba(0, 0, 0, 0.192);
-  /* --navbar-background-color: rgb(255, 255, 255); */
+:root.light-theme {
+  --navbar-background-color: rgb(208, 207, 207);
   --main-background-color: rgb(255, 255, 255);
   --accent-color: rgb(0, 0, 202);
   --font-color: rgb(0, 0, 0);
 }
 
-:root.dark-theme{
+:root.dark-theme {
   --navbar-background-color: rgb(42, 42, 42);
-  /* --navbar-background-color: rgb(255, 255, 255); */
   --main-background-color: rgb(87, 87, 87);
   --accent-color: rgb(218, 106, 2);
   --font-color: rgb(255, 255, 255);
@@ -32,6 +30,7 @@ html {
 }
 
 body {
+  background-color: var(--main-background-color);
   width: 100%;
   margin: 0px;
   padding: 0px;
@@ -72,7 +71,6 @@ body {
 
 #logo a {
   color: var(--font-color);
-
 }
 
 #logo-sub-title {
@@ -313,7 +311,6 @@ section {
 }
 
 .projects-container {
-  /* border: 3px solid black; */
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -324,14 +321,15 @@ section {
 
 /* Projects */
 .project-div {
+  position: relative;
   margin: 25px auto;
   transition: all 1s;
   padding: 20px;
   padding-top: 0px;
-  width: 900px;
+  width: 850px;
   height: fit-content;
   display: grid;
-  grid-template-rows: 25% auto;
+  grid-template-rows: 26% auto;
   justify-content: center;
   /* background-color: var(--navbar-background-color); */
   border: 2px solid var(--font-color);
@@ -344,45 +342,15 @@ section {
   transition: all 1s;
 }
 
-/* .project-title {
-} */
-
-.project-content {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 35% 65%;
-}
-
-.project-img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.project-info {
-  margin-top: 0px;
-  height: 100%;
-  padding: 10px 30px 0px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.project-desc {
-  text-align: justify;
-  margin: 0px auto;
-  margin-bottom: auto;
-}
-
-.project-desc a {
-  color: var(--font-color);
-}
-
 .project-techs {
+  position: absolute;
+  right: 15px;
+  top: 15px;
   width: 100%;
   margin-bottom: auto;
   height: fit-content;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -390,7 +358,7 @@ section {
   color: rgb(255, 255, 255);
   padding: 5px;
   border-radius: 5px;
-  margin: 0px 10px 0px 0px;
+  margin: 0px 0px 0px 10px;
   font-size: 0.7rem;
 }
 
@@ -414,6 +382,39 @@ section {
   background-color: rgb(20, 136, 20);
 }
 
+.project-title {
+  margin-right: auto;
+}
+
+.project-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.project-info {
+  margin-top: 0px;
+  height: 100%;
+  padding: 15px 30px 0px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-desc {
+  text-align: justify;
+  margin: 0px;
+}
+
+.project-desc a {
+  color: var(--font-color);
+}
+
 .project-links {
   display: flex;
   justify-content: center;
@@ -428,7 +429,7 @@ section {
 }
 
 .project-links a {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   width: 80px;
   margin: 10px;
   padding: 3px;
@@ -474,76 +475,22 @@ section {
   vertical-align: middle;
 }
 
+/* Media Queries */
+@media screen and (max-width: 1300px) {
+  main {
+    margin-left: 20%;
+  }
+
+  .project-div {
+    width: 680px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
-  .skill-div {
-    margin: 30px;
-  }
-
-  #header-container {
-    position: absolute;
-    z-index: 5;
-  }
-
-  #hamburger {
-    display: block;
-    position: static;
-  }
-
-  .nav-links {
-    display: none;
-    background-color: var(--navbar-background-color);
-    width: fit-content;
-    height: fit-content;
-    padding: 30px 50px;
-    position: absolute;
-    right: -130px;
-    transform: translateX(-50%);
-    top: 100px;
-    flex-direction: column;
-    text-align: center;
-    border-top: 4px solid var(--navbar-background-color);
-    border-bottom-left-radius: 20px;
-    box-shadow: 0px 3px 7px -3px var(--font-color);
-  }
-
-  .nav-links a {
-    margin: 20px;
-    font-size: 1.3rem;
-    display: block;
-  }
-
-  .show-menu {
-    display: flex;
-  }
 }
 
 @media screen and (max-width: 680px) {
-  section {
-    padding: 0px;
-  }
-
-  .project-div {
-    transform: scale(90%);
-    width: 90%;
-  }
-
-  .skill-div img {
-    height: auto;
-    width: 50px;
-  }
-
-  .contact-container {
-    transform: scale(80%);
-  }
 }
 
 @media screen and (max-width: 400px) {
-  .project-div {
-    transform: scale(80%);
-    width: fit-content;
-  }
-
-  .contact-container {
-    transform: scale(60%);
-  }
 }
