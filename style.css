@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap");
+
 :root.light-theme{
   --navbar-background-color: rgba(0, 0, 0, 0.192);
   /* --navbar-background-color: rgb(255, 255, 255); */
@@ -45,13 +46,15 @@ body {
 /*** SideBar ***/
 .side-bar {
   position: fixed;
+  left: 0px;
+  top: 0px;
   height: 100vh;
   width: 20%;
   max-width: 240px;
   padding-left: 20px;
   display: grid;
   grid-template-rows: 160px auto;
-  box-shadow: 2px 0px 5px gray;
+  box-shadow: 1px 0px 20px gray;
   background-color: var(--navbar-background-color);
 }
 
@@ -115,8 +118,12 @@ body {
   width: 100%;
 }
 
-#theme-toggle {
+#theme-toggle-btn {
   margin: 10px;
+}
+
+#theme-toggle-btn:hover {
+  cursor: pointer;
 }
 
 #language-change {
