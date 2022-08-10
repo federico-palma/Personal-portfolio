@@ -19,13 +19,12 @@ const headerTitle = document.getElementById("logo");
 let firstScroll = true;
 
 document.addEventListener("scroll", () => {
-
   if (window.scrollY > 50) {
     introTitle.classList.remove("fade-in-class");
     introTitle.classList.add("fade-out-class");
     headerTitle.classList.remove("fade-out-class");
     headerTitle.classList.add("fade-in-class");
-    firstScroll = false
+    firstScroll = false;
   }
   if (window.scrollY < 50) {
     introTitle.classList.remove("fade-out-class");
@@ -36,3 +35,17 @@ document.addEventListener("scroll", () => {
     }
   }
 });
+
+// Handle change theme
+const changeThemeBtn = document.getElementById("theme-toggle-btn");
+const rootElement = document.documentElement;
+
+rootElement.className = "light-theme";
+
+function setTheme() {
+  const newTheme =
+    rootElement.className === "light-theme" ? "dark-theme" : "light-theme";
+  rootElement.className = newTheme;
+}
+
+changeThemeBtn.addEventListener("click", setTheme);

@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap");
-:root {
-  --navbar-background-color: rgba(0, 0, 0, 0.109);
+:root.light-theme{
+  --navbar-background-color: rgba(0, 0, 0, 0.192);
   /* --navbar-background-color: rgb(255, 255, 255); */
   --main-background-color: rgb(255, 255, 255);
   --accent-color: rgb(0, 0, 202);
   --font-color: rgb(0, 0, 0);
+}
+
+:root.dark-theme{
+  --navbar-background-color: rgb(42, 42, 42);
+  /* --navbar-background-color: rgb(255, 255, 255); */
+  --main-background-color: rgb(87, 87, 87);
+  --accent-color: rgb(218, 106, 2);
+  --font-color: rgb(255, 255, 255);
 }
 
 * {
@@ -107,7 +115,7 @@ body {
   width: 100%;
 }
 
-#light-dark-toggle {
+#theme-toggle {
   margin: 10px;
 }
 
