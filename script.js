@@ -46,7 +46,7 @@ const rootElement = document.documentElement;
 
 rootElement.className = localStorage.getItem("currentTheme")
   ? localStorage.getItem("currentTheme")
-  : "light-theme";
+  : "dark-theme";
 
 function setTheme() {
   const newTheme =
@@ -55,8 +55,8 @@ function setTheme() {
   saveThemetoLocalStorage();
 }
 
-themeToggleBtn.addEventListener("click", setTheme);
-
 function saveThemetoLocalStorage() {
   localStorage.setItem("currentTheme", rootElement.className);
 }
+
+themeToggleBtn.addEventListener("click", setTheme);
