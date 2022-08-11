@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap"); */
 
 :root.light-theme {
   --navbar-background-color: rgb(208, 207, 207);
@@ -25,6 +25,7 @@ html {
   font-family: "Archivo", "Varela Round", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
+  font-weight: 200;
   scroll-behavior: smooth;
   width: 100%;
 }
@@ -62,6 +63,7 @@ body {
 }
 
 #logo {
+  font-family: "Roboto Serif";
   font-size: 1.8rem;
   font-weight: 900;
   margin: 20px auto 30px 0px;
@@ -71,10 +73,12 @@ body {
 
 #logo a {
   color: var(--font-color);
+  font-weight: 700;
 }
 
 #logo-sub-title {
   font-size: 1rem;
+  font-weight: 200;
   margin: 5px auto;
 }
 
@@ -204,11 +208,16 @@ section {
   justify-content: left;
   align-items: left;
   opacity: 0;
+  font-family: "Roboto Serif";
 }
 
-#intro-header {
-  font-size: 3rem;
+.intro-container h1 {
+  font-size: 3.5rem;
   font-weight: 900;
+}
+
+.intro-container h2 {
+  font-weight: 300;
 }
 
 /* Fade ins between intro title and side title animation */
@@ -235,11 +244,11 @@ section {
   animation: fadeout 2s forwards;
 }
 .fade-in-class-side {
-  -webkit-animation: fadein 2s forwards 0.5s;
-  -moz-animation: fadein 2s forwards 0.5s;
-  -ms-animation: fadein 2s forwards 0.5s;
-  -o-animation: fadein 2s forwards 0.5s;
-  animation: fadein 2s forwards 0.5s;
+  -webkit-animation: fadein 2s forwards 1s;
+  -moz-animation: fadein 2s forwards 1s;
+  -ms-animation: fadein 2s forwards 1s;
+  -o-animation: fadein 2s forwards 1s;
+  animation: fadein 2s forwards 1s;
 }
 
 @keyframes fadein {
