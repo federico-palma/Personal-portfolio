@@ -362,7 +362,7 @@ section {
 
 .skill-div img {
   height: auto;
-  width: 80px;
+  width: 80%;
   margin: auto;
 }
 
@@ -429,7 +429,7 @@ section {
 }
 
 .project-techs h5 {
-  color: var(--font-color);
+  color: white;
   padding: 5px;
   border-radius: 5px;
   margin: 0px 0px 0px 10px;
@@ -441,19 +441,19 @@ section {
 }
 
 .project-tech-css {
-  background-color: rgb(14, 102, 165);
+  background-color: rgb(12, 91, 147);
 }
 
 .project-tech-js {
-  background-color: rgb(202, 164, 9);
+  background-color: rgb(208, 173, 36);
 }
 
 .project-tech-react {
-  background-color: rgb(74, 162, 184);
+  background-color: rgb(68, 149, 169);
 }
 
 .project-tech-vue {
-  background-color: rgb(61, 161, 118);
+  background-color: rgb(57, 150, 110);
 }
 
 .project-title {
@@ -474,7 +474,7 @@ section {
 .project-info {
   margin-top: 0px;
   height: 100%;
-  padding: 15px 30px 0px 30px;
+  padding: 5px 30px 0px 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -508,6 +508,7 @@ section {
   font-size: 0.8rem;
   width: 80px;
   margin: 10px;
+  margin-bottom: 0px;
   padding: 3px;
   color: var(--font-color);
   text-decoration: none;
