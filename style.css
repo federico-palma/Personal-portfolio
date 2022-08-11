@@ -203,6 +203,7 @@ section {
   flex-direction: column;
   justify-content: left;
   align-items: left;
+  opacity: 0;
 }
 
 #intro-header {
@@ -210,28 +211,45 @@ section {
   font-weight: 900;
 }
 
-/* Fade ins between title and header animation */
-.fade-out-class {
+/* Fade ins between intro title and side title animation */
+.fade-out-class-intro {
   -webkit-animation: fadeout 2s forwards;
   -moz-animation: fadeout 2s forwards;
   -ms-animation: fadeout 2s forwards;
   -o-animation: fadeout 2s forwards;
   animation: fadeout 2s forwards;
 }
-.fade-in-class {
-  -webkit-animation: fadein 2s forwards;
-  -moz-animation: fadein 2s forwards;
-  -ms-animation: fadein 2s forwards;
-  -o-animation: fadein 2s forwards;
-  animation: fadein 2s forwards;
+.fade-in-class-intro {
+  -webkit-animation: fadein 2s forwards 0.5s;
+  -moz-animation: fadein 2s forwards 0.5s;
+  -ms-animation: fadein 2s forwards 0.5s;
+  -o-animation: fadein 2s forwards 0.5s;
+  animation: fadein 2s forwards 0.5s;
+}
+
+.fade-out-class-side {
+  -webkit-animation: fadeout 2s forwards;
+  -moz-animation: fadeout 2s forwards;
+  -ms-animation: fadeout 2s forwards;
+  -o-animation: fadeout 2s forwards;
+  animation: fadeout 2s forwards;
+}
+.fade-in-class-side {
+  -webkit-animation: fadein 2s forwards 0.5s;
+  -moz-animation: fadein 2s forwards 0.5s;
+  -ms-animation: fadein 2s forwards 0.5s;
+  -o-animation: fadein 2s forwards 0.5s;
+  animation: fadein 2s forwards 0.5s;
 }
 
 @keyframes fadein {
   from {
     opacity: 0;
+    letter-spacing: 3px;
   }
   to {
     opacity: 1;
+    letter-spacing: 0px;
   }
 }
 @keyframes fadeout {
