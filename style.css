@@ -390,7 +390,7 @@ section {
 }
 
 .project-techs h5 {
-  color: rgb(255, 255, 255);
+  color: var(--font-color);
   padding: 5px;
   border-radius: 5px;
   margin: 0px 0px 0px 10px;
@@ -398,23 +398,23 @@ section {
 }
 
 .project-tech-html {
-  background-color: rgb(199, 2, 2);
+  background-color: rgb(226, 63, 26);
 }
 
 .project-tech-css {
-  background-color: rgb(3, 3, 204);
+  background-color: rgb(14, 102, 165);
 }
 
 .project-tech-js {
-  background-color: rgb(194, 181, 3);
+  background-color: rgb(202, 164, 9);
 }
 
 .project-tech-react {
-  background-color: rgb(72, 72, 253);
+  background-color: rgb(74, 162, 184);
 }
 
 .project-tech-vue {
-  background-color: rgb(20, 136, 20);
+  background-color: rgb(61, 161, 118);
 }
 
 .project-title {
