@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap"); */
 
 :root.light-theme {
-  --navbar-background-color: rgb(208, 207, 207);
+  --navbar-background-color: rgb(183, 184, 194);
   --main-background-color: rgb(236, 236, 236);
   --accent-color: rgb(0, 0, 202);
   --font-color: rgb(0, 0, 0);
@@ -197,7 +197,12 @@ section {
 /* Intro Section */
 #intro {
   height: 100vh;
-  background-color: var(--section1-background-color);
+  background: var(--main-background-color);
+  background: linear-gradient(
+    0deg,
+    var(--main-background-color) 0%,
+    var(--navbar-background-color) 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -530,6 +535,7 @@ section {
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+    box-shadow: none;
   }
 
   #logo {
@@ -553,11 +559,11 @@ section {
     justify-content: center;
     transform: translateX(100%);
     transition: transform 0.7s ease-out;
-    box-shadow: -1px 3px 5px gray;
   }
 
   .show-menu {
     /* visibility: visible; */
+    box-shadow: 1px 0px 20px gray;
     transform: translateX(0%);
   }
 
@@ -571,6 +577,14 @@ section {
 
   main {
     margin: 0px;
+  }
+
+  #intro {
+    margin-top: 85px;
+  }
+
+  .intro-container {
+    transform: translateY(-80px);
   }
 }
 
