@@ -3,7 +3,7 @@
   --navbar-font-color: rgb(255, 255, 255);
   --navbar-underline-color: rgb(255, 255, 255);
   --idle-color: rgb(200, 201, 201);
-  --main-background-color: #C4D7E0;
+  --main-background-color: #d4dde1;
   --accent-color: #5978bd;
   --font-color: rgb(68, 68, 68);
 }
@@ -690,6 +690,7 @@ section {
 
   .logo > h3 {
     font-size: 0.8rem;
+    text-underline-offset: 2px;
   }
 
   section {
@@ -702,8 +703,9 @@ section {
 
   .intro-container h2 {
     font-size: 1rem;
+    text-underline-offset: 3px;
   }
-
+  
   .project-div {
     width: 90%;
     margin: 25px;
