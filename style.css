@@ -349,7 +349,6 @@ section {
 
 .skill-div {
   margin: 0px 40px 50px 40px;
-  transition: all 2s;
   height: auto;
   width: 95px;
   display: grid;
@@ -634,6 +633,10 @@ section {
     width: auto;
   }
 
+  .skill-div {
+    margin: 0px 30px 40px 30px;
+  }
+
   .project-div {
     width: 80%;
     margin: 25px 50px;
@@ -704,11 +707,18 @@ section {
 
   .project-div > div:first-child {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 10px;
   }
 
   .project-title {
     text-align: center;
+    margin: 15px auto;
+  }
+
+  .project-techs {
+    top: 0px;
   }
 
   .project-img {
@@ -733,6 +743,18 @@ section {
   }
 }
 
-@media screen and (max-width: 600px) {
-  
+@media screen and (max-width: 400px) {
+  #hamburger {
+    position: absolute;
+    right: 0px;
+    margin-right: 0px;
+  }
+
+  .skill-div {
+    margin: 0px 20px 40px 20px;
+  }
+
+  .skill-div img {
+    width: 65%;
+  }
 }
