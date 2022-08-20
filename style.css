@@ -461,7 +461,6 @@ section {
 
 .project-title {
   font-size: 1.5rem;
-  /* margin-right: auto; */
   text-align: left;
 }
 
@@ -474,6 +473,8 @@ section {
 .project-img {
   width: 100%;
   border-radius: 5px;
+  /* border: 1px solid var(--font-color); */
+  box-shadow: 0px 0px 3px var(--idle-color);
 }
 
 .project-info {
@@ -779,5 +780,11 @@ section {
 
   .skill-div img {
     width: 65%;
+  }
+
+  .project-div:hover {
+    box-shadow: 10px 15px 0px var(--accent-color);
+    background-color: var(--main-background-color);
+    transform: scale(101%);
   }
 }
