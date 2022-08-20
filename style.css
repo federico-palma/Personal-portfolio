@@ -1,16 +1,20 @@
 :root.light-theme {
-  --navbar-background-color: rgb(183, 184, 194);
+  --navbar-background-color: rgb(138, 176, 205);
+  --navbar-font-color: rgb(255, 255, 255);
+  --navbar-underline-color: rgb(0, 0, 208);
+  --idle-color: rgb(227, 227, 227);
   --main-background-color: rgb(236, 236, 236);
-  --accent-color: rgb(0, 0, 202);
-  --idle-color: grey;
-  --font-color: rgb(0, 0, 0);
+  --accent-color: rgb(0, 0, 208);
+  --font-color: rgb(68, 68, 68);
 }
 
 :root.dark-theme {
   --navbar-background-color: rgb(42, 42, 42);
+  --navbar-font-color: rgb(255, 255, 255);
+  --navbar-underline-color: rgb(218, 106, 2);
+  --idle-color: rgb(128, 128, 128);
   --main-background-color: rgb(87, 87, 87);
   --accent-color: rgb(218, 106, 2);
-  --idle-color: grey;
   --font-color: rgb(255, 255, 255);
 }
 
@@ -34,6 +38,8 @@ body {
   width: 100%;
   margin: 0px;
   padding: 0px;
+  transition-property: color, transform, background-color;
+  transition-duration: 1s;
 }
 
 .container {
@@ -62,6 +68,7 @@ body {
   top: 0px;
   height: 100vh;
   width: 20%;
+  min-width: 221px;
   max-width: 240px;
   padding-left: 20px;
   display: grid;
@@ -81,11 +88,12 @@ body {
   margin: 20px auto 30px 0px;
   width: fit-content;
   opacity: 0;
+  color: var(--navbar-font-color);
 }
 
 .logo > a {
+  color: var(--navbar-font-color);
   font-size: 1.8rem;
-  color: var(--font-color);
   font-weight: 700;
 }
 
@@ -94,7 +102,7 @@ body {
   font-weight: 200;
   margin: 5px auto;
   text-decoration: underline;
-  text-decoration-color: var(--accent-color);
+  text-decoration-color: var(--navbar-underline-color);
   text-underline-offset: 3px;
 }
 
@@ -123,9 +131,9 @@ body {
 }
 
 .navbar-link:hover {
-  color: var(--font-color);
+  color: var(--navbar-font-color);
   text-decoration: underline;
-  text-decoration-color: var(--accent-color);
+  text-decoration-color: var(--navbar-underline-color);
   text-underline-offset: 5px;
 }
 
@@ -145,7 +153,7 @@ body {
 
 #theme-toggle-btn:hover {
   cursor: pointer;
-  color: var(--font-color);
+  color: var(--navbar-font-color);
 }
 
 #language-change {
@@ -154,7 +162,7 @@ body {
 }
 
 #language-change:hover {
-  color: var(--font-color);
+  color: var(--navbar-font-color);
   cursor: pointer;
 }
 
@@ -162,6 +170,7 @@ body {
 #hamburger {
   display: none;
   cursor: pointer;
+  margin-right: 15px;
 }
 
 .bar1,
@@ -171,7 +180,7 @@ body {
   right: 10px;
   width: 35px;
   height: 5px;
-  background-color: var(--font-color);
+  background-color: var(--navbar-font-color);
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -240,6 +249,7 @@ section {
   align-items: left;
   opacity: 0;
   font-family: "Roboto Serif";
+  color: var(--navbar-font-color);
 }
 
 .intro-container h1 {
@@ -248,10 +258,11 @@ section {
 }
 
 .intro-container h2 {
+  font-size: 1.5rem;
   font-weight: 300;
   text-decoration: underline;
-  text-decoration-color: var(--accent-color);
-  text-underline-offset: 5px;
+  text-decoration-color: var(--navbar-underline-color);
+  text-underline-offset: 4px;
 }
 
 /* Fade ins between intro title and side title animation */
@@ -312,7 +323,7 @@ section {
 }
 
 .about-container {
-  width: 500px;
+  width: 600px;
   min-width: 50%;
 }
 
@@ -321,6 +332,10 @@ section {
 }
 
 /* Skills Section */
+#skills h2 {
+  font-size: 1.5rem;
+}
+
 .skills-container {
   margin: 75px auto;
   width: fit-content;
@@ -380,7 +395,6 @@ section {
 .project-div {
   position: relative;
   margin: 25px auto;
-  transition: all 1s;
   padding: 15px;
   padding-top: 0px;
   width: 850px;
@@ -389,13 +403,14 @@ section {
   grid-template-rows: 75px auto;
   justify-content: center;
   border: 2px solid var(--font-color);
+  transition-property: color, transform, box-shadow;
+  transition-duration: 1s;
 }
 
 .project-div:hover {
   box-shadow: 15px 15px 0px var(--accent-color);
   background-color: var(--main-background-color);
   transform: scale(101%);
-  transition: all 1s;
 }
 
 .project-techs {
@@ -439,7 +454,9 @@ section {
 }
 
 .project-title {
+  font-size: 1.5rem;
   margin-right: auto;
+  text-align: left;
 }
 
 .project-content {
@@ -456,7 +473,7 @@ section {
 .project-info {
   margin-top: 0px;
   height: 100%;
-  padding: 5px 30px 0px 30px;
+  padding: 10px 30px 0px 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -471,6 +488,7 @@ section {
 
 .project-desc a {
   color: var(--font-color);
+  font-size: 0.9rem;
 }
 
 .project-links {
@@ -509,11 +527,11 @@ section {
 }
 
 .contact-container {
-  width: 430px;
+  width: auto;
 }
 
 #contact-list {
-  width: 430px;
+  width: auto;
 }
 
 #contact-list li {
@@ -523,13 +541,13 @@ section {
 }
 
 #contact-list li a {
-  font-size: 30px;
+  font-size: 1.5rem;
   color: var(--font-color);
   text-decoration: none;
 }
 
 .contact-icons {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-right: 40px;
   vertical-align: middle;
 }
@@ -567,21 +585,19 @@ section {
 
   #hamburger {
     display: block;
-    margin-right: 15px;
   }
 
   .menu {
     /* visibility: hidden; */
     background-color: var(--navbar-background-color);
     width: 165px;
-    height: fit-content;
+    height: calc(100vh - 85px);
     padding-top: 10px;
     position: absolute;
     right: 0px;
-    top: 86px;
+    top: 85px;
     justify-content: center;
-    border-radius: 5px;
-    box-shadow: 1px 0px 20px gray;
+    border-bottom-left-radius: 5px;
     transform: translateX(120%);
     transition: transform 0.7s ease-out;
   }
@@ -613,7 +629,102 @@ section {
 }
 
 @media screen and (max-width: 760px) {
+
+  .about-container {
+    width: auto;
+  }
+
+  .project-div {
+    width: 80%;
+    margin: 25px 50px;
+    grid-template-rows: auto auto;
+  }
+
+  .project-div > div:first-child {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .project-title {
+    justify-self: start;
+  }
+
+  .project-techs {
+    position: relative;
+    right: 0px;
+    width: fit-content;
+    justify-self:right
+  }
+
+  .project-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    gap: 15px;
+  }
+
+  .project-img {
+    width: 235px;
+    min-width: 50%;
+  }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 18px;
+  }
+
+  .logo > a {
+    font-size: 1.4rem;
+  }
+  
+  .logo > h3 {
+    font-size: 0.8rem;
+  }
+
+  section {
+    padding: 50px 10px;
+  }
+
+  .intro-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro-container h2 {
+    font-size: 1rem;
+  }
+
+  .project-div {
+    width: 90%;
+    margin: 25px;
+  }
+
+  .project-techs {
+    flex-wrap: wrap;
+  }
+
+  .project-img {
+    width: 235px;
+  }
+
+  .project-info {
+    padding: 5px 0px 0px 0px;
+  }
+
+  .project-desc {
+    font-size: 0.8rem;
+  }
+
+  .project-desc a {
+    font-size: 0.8rem;
+  }
+
+  .project-links > div {
+    flex-direction: column;
+    align-items: center;
+  }
 }
