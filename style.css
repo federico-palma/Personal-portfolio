@@ -218,6 +218,7 @@ section {
 }
 
 .section-header {
+  font-size: 1.8rem;
   text-decoration: underline;
   text-decoration-color: var(--accent-color);
   text-underline-offset: 10px;
