@@ -1,10 +1,10 @@
 :root.light-theme {
-  --navbar-background-color: rgb(138, 176, 205);
+  --navbar-background-color: rgb(46, 46, 255);
   --navbar-font-color: rgb(255, 255, 255);
-  --navbar-underline-color: rgb(0, 0, 208);
-  --idle-color: rgb(227, 227, 227);
+  --navbar-underline-color: rgb(255, 255, 255);
+  --idle-color: rgb(160, 160, 160);
   --main-background-color: rgb(236, 236, 236);
-  --accent-color: rgb(0, 0, 208);
+  --accent-color: rgb(46, 46, 255);
   --font-color: rgb(68, 68, 68);
 }
 
@@ -73,7 +73,6 @@ body {
   padding-left: 20px;
   display: grid;
   grid-template-rows: 160px auto;
-  box-shadow: 1px 0px 20px gray;
   background-color: var(--navbar-background-color);
 }
 
@@ -261,7 +260,7 @@ section {
   font-size: 1.5rem;
   font-weight: 300;
   text-decoration: underline;
-  text-decoration-color: var(--navbar-underline-color);
+  text-decoration-color: var(--accent-color);
   text-underline-offset: 4px;
 }
 
@@ -412,13 +411,20 @@ section {
   transform: scale(101%);
 }
 
-.project-techs {
-  position: absolute;
-  right: 15px;
-  top: 15px;
+.project-div > div:first-child {
   width: 100%;
-  margin-bottom: auto;
+  display: grid;
+  grid-template-columns: auto max-content;
+  gap: 20px;
+  align-content: center;
+}
+
+.project-techs {
+  position: relative;
+  width: 100%;
+  top: 15px;
   height: fit-content;
+  align-self: flex-start;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -531,30 +537,36 @@ section {
 
 #contact-list {
   width: auto;
+  padding: 0px;
 }
 
 #contact-list li {
   list-style-type: none;
-  text-align: left;
-  margin: 30px 0px;
+  margin: 30px auto;
 }
 
-#contact-list li a {
-  font-size: 1.5rem;
+.contact-links {
   color: var(--font-color);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.contact-links p {
+  font-size: 1.5rem;
 }
 
 .contact-icons {
-  font-size: 1.5rem;
-  margin-right: 40px;
-  vertical-align: middle;
+  font-size: 2rem;
+  width: 65px;
+  margin-right: 30px;
+  text-align: center;
 }
 
 /* Media Queries */
 @media screen and (max-width: 1300px) {
   main {
-    margin-left: 20%;
+    margin-left: 221px;
   }
 
   .project-div {
@@ -628,7 +640,6 @@ section {
 }
 
 @media screen and (max-width: 760px) {
-
   .about-container {
     width: auto;
   }
@@ -643,20 +654,12 @@ section {
     grid-template-rows: auto auto;
   }
 
-  .project-div > div:first-child {
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto max-content;
-    gap: 20px;
-    align-items: center;
-  }
-
   .project-title {
     justify-self: start;
+    margin-top: 12px;
   }
 
   .project-techs {
-    position: relative;
     right: 0px;
     width: fit-content;
     justify-content: right;
@@ -683,7 +686,7 @@ section {
   .logo > a {
     font-size: 1.4rem;
   }
-  
+
   .logo > h3 {
     font-size: 0.8rem;
   }
@@ -708,16 +711,18 @@ section {
   .project-div > div:first-child {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0px;
     margin-bottom: 10px;
   }
 
   .project-title {
     text-align: center;
-    margin: 15px auto;
+    margin-bottom: 15px;
   }
-
+  
   .project-techs {
+    align-self: center;
     top: 0px;
   }
 
@@ -740,6 +745,20 @@ section {
   .project-links > div {
     flex-direction: column;
     align-items: center;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-links p {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .contact-icons {
+    margin-right: unset;
   }
 }
 
