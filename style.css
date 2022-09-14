@@ -42,7 +42,7 @@ body {
   transition-duration: 1s;
 }
 
-.container {
+.maincontainer {
   margin: auto;
   width: 100%;
   max-width: 1800px;
@@ -457,6 +457,10 @@ section {
 
 .project-tech-vue {
   background-color: rgb(57, 150, 110);
+}
+
+.project-tech-firebase{
+  background-color: rgb(211, 133, 7);
 }
 
 .project-title {
